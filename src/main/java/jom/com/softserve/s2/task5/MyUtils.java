@@ -5,6 +5,13 @@ import java.util.stream.Collectors;
 
 public class MyUtils {
 
-    //Write your code here
-
+    public <T extends Shape> double sumPerimeter(List<T> figures) {
+        double sum = 0.0;
+        for (T figure : figures) {
+            if (figure != null) {
+                sum += figure.getPerimeter();
+            }
+        }
+        return sum;
+    }
 }
